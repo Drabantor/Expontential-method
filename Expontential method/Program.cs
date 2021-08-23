@@ -25,11 +25,11 @@ namespace Expontential_method
                 Console.Write("\n\t[1]Enter program");
                 Console.WriteLine("\n\t[2]Quit program");
 
-                int menyVal = Convert.ToInt32(Console.ReadLine());
+                int menuChoice = Convert.ToInt32(Console.ReadLine());
 
                 try
                 {
-                    switch (menyVal)
+                    switch (menuChoice)
                     {
                         case 1:
                             Console.WriteLine("\n\t(Note: use , and not . for decimal numbers)");
