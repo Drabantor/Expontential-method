@@ -2,11 +2,17 @@
 
 namespace Expontential_method
 {
+    // The astrophysicist Neil deGrasse Tyson asked, on his YouTube channel Startalk (a video about Exponentials), the question if you rather
+    // would take 5 MUSD right now or take a penny a day which is doubled each day for 30 days. So, the answer he says, is that you would get
+    // about 10 MUSD if you choose the second option (plus about 10 MUSD more since you are handed the money each day). 
+    // I made this script in order to check whether that claim is true. It is.
+
+
     class Exponent
     {
-        public static decimal DoubleExp(decimal noLoop, decimal storedNo)
+        public static decimal DoubleExp(decimal noLoop, decimal yourNo)
         {
-            decimal result = storedNo;
+            decimal result = yourNo;
 
             for (decimal i = 0; i < noLoop; i++)
             {
@@ -35,12 +41,12 @@ namespace Expontential_method
                             Console.WriteLine("\n\t(Note: use , and not . for decimal numbers)");
 
                             Console.WriteLine("\n\tWhat is your number? ");
-                            decimal storedno = Convert.ToDecimal(Console.ReadLine());
+                            decimal yourNo = Convert.ToDecimal(Console.ReadLine());
 
                             Console.WriteLine("\n\tHow many times should your number get doubled? ");
                             decimal noLoop = Convert.ToDecimal(Console.ReadLine());
 
-                            decimal exp = DoubleExp(noLoop, storedno);
+                            decimal exp = DoubleExp(noLoop, yourNo);
 
                             Console.WriteLine("\n\tThe value is: {0:N}", exp);
                             Console.ReadKey();
