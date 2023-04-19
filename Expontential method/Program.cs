@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace Expontential_method
 {
@@ -12,17 +13,17 @@ namespace Expontential_method
 
     class Exponent
     {
-        public static decimal DoubleExp(decimal noLoop, decimal yourNo)
+        public static BigInteger DoubleExp(double noLoop, double yourNo)
         {
-            decimal result = yourNo;
+            double result = yourNo;
 
-            for (decimal i = 0; i < noLoop; i++)
+            for (double i = 0; i < noLoop; i++)
             {
                 result += result;
                 Console.WriteLine((i + 1).ToString() + ") " + result.ToString()); // Add 1 to i when displaying it on the console
             }
 
-            return result;
+            return (BigInteger)result;
         }
 
         static void Main()
@@ -50,12 +51,12 @@ namespace Expontential_method
                             Console.WriteLine("\n\t(Note: use , and not . for decimal numbers)");
 
                             Console.WriteLine("\n\tWhat is your number? ");
-                            decimal yourNo = Convert.ToDecimal(Console.ReadLine());
+                            double yourNo = Convert.ToDouble(Console.ReadLine());
 
                             Console.WriteLine("\n\tHow many times should your number (i.e. the product) get doubled? ");
-                            decimal noLoop = Convert.ToDecimal(Console.ReadLine());
+                            double noLoop = Convert.ToDouble(Console.ReadLine());
 
-                            decimal exp = DoubleExp(noLoop, yourNo);
+                            double exp = (double)DoubleExp(noLoop, yourNo);
 
                             Console.WriteLine("\n\tThe value is: {0:N}", exp);
                             Console.WriteLine("\n\tPress any key to revert to menu.");
